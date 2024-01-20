@@ -1,0 +1,6 @@
+*.log
+*.csv
+test/sandbox/
+*pycache*
+.DS_Store
+.idea
