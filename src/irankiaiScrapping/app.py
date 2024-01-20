@@ -7,7 +7,7 @@ from src.irankiaiScrapping.tools.find_products import SearchSession
 logging.basicConfig(format='%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S',
                     level=logging.DEBUG,
-                    filename='../../logs/logs.txt')
+                    filename='../../logs/irankiai.log')
 logger = logging.getLogger('scraping')
 logger.info('Loading items list...')
 
