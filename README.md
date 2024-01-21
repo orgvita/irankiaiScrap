@@ -7,7 +7,7 @@ This Python project scrapes product category information from https://www.iranki
 - **CSV Output**: Extracted data is stored in the `results/` directory, with filenames like `productCategory.csv`.
 
 ## Getting Started
-1. Navigate to `src/irankiaiScr`.
+1. Navigate to `src/irankiaiScrap`.
 2. Run `app.py` and follow the prompts to select a product category or input a direct URL.
 
 ## Requirements

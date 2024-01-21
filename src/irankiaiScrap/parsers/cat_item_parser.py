@@ -2,7 +2,7 @@ import config
 import re
 
 from src.irankiaiScrap.parsers.item_page import ItemDetailsParser
-
+from src.irankiaiScrap.tools.logger import logger
 
 class CatItemParser:
 
@@ -30,6 +30,7 @@ class CatItemParser:
         locator = config.LINK
         self.link_tag = self.article.select_one(locator)
         self.link = self.link_tag.attrs.get('href','-')
+        logger.debug(f'item link: {self.link}')
         return self.link
 
     @property

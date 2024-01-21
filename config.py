@@ -30,3 +30,9 @@ HEADERS = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleW
 # only include second part (after slash) of search phrase
 DIRECTORY = '../../results'
 FILENAME_PATTERN = '(?:.*/)?(.+)'
+
+#logging config
+LOG_LEVEL = "INFO"  # use: "INFO", "DEBUG", "WARNING", "ERROR", "CRITICAL"
+LOG_FORMAT = '%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s'
+LOG_DATEFMT = '%Y-%m-%d %H:%M:%S'
+LOG_FILE = '../../logs/irankiai.log'

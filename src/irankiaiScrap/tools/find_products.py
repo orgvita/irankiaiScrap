@@ -4,6 +4,8 @@ import time
 
 import config
 from src.irankiaiScrap.parsers.cat_find_items import SelectItemsParser
+from src.irankiaiScrap.tools.logger import logger
+
 
 class SearchSession:
     def __init__(self, search_phrase):
@@ -18,10 +20,10 @@ class SearchSession:
         while continue_pagination:
             self.url = f'{self.base_url}#!/p={no}'
             print(self.url)
+            logger.info(f'category page: {self.url}')
             self.category_page = SelectItemsParser(self.url)
             for i, item_in_page in enumerate(self.category_page.articles):
-                time.sleep(1)
-                # all_item_data = item_in_page.all_info
+                time.sleep(config.SLEEP)
                 if i == 0:
                     if self.end_control == item_in_page.all_info:
                         print("Scraping done. Now saving results to a csv file")
@@ -44,5 +46,7 @@ class SearchSession:
                 writer.writeheader()
                 for item in self.extracted_data:
                     writer.writerow(item)
+            logger.info(f'Successfully saved to {csv_file}.')
         except IOError:
             print("I/O error")
+            logger.error(f'Error writing to {csv_file}...')

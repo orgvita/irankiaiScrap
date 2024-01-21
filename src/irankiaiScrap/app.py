@@ -1,20 +1,15 @@
-import logging
 import re
 
 import config
 from src.irankiaiScrap.tools.find_products import SearchSession
+from src.irankiaiScrap.tools.logger import logger
 
-logging.basicConfig(format='%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
-                    datefmt='%Y-%m-%d %H:%M:%S',
-                    level=logging.DEBUG,
-                    filename='../../logs/irankiai.log')
-logger = logging.getLogger('scraping')
-logger.info('Loading items list...')
 
 def what_category():
     print(config.EXPLAIN_TEXT)
     user_input = input('Enter HERE: ')
     category = re.sub(config.CATEGORY_PATTERN, '', user_input)
+    logger.info(f'Products category: {category}. Scrapping started.')
     return category
 
 def scrape_site():
