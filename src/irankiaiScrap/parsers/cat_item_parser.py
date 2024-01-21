@@ -1,7 +1,7 @@
 import config
 import re
 
-from src.irankiaiScrapping.parsers.item_page import ItemDetailsParser
+from src.irankiaiScrap.parsers.item_page import ItemDetailsParser
 
 
 class CatItemParser:

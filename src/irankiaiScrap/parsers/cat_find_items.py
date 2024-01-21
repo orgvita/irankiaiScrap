@@ -1,7 +1,7 @@
 import config
 
-from src.irankiaiScrapping.parsers.cat_item_parser import CatItemParser
-from src.irankiaiScrapping.tools.html_parsing import parse_html
+from src.irankiaiScrap.parsers.cat_item_parser import CatItemParser
+from src.irankiaiScrap.tools.html_parsing import parse_html
 
 
 class SelectItemsParser:

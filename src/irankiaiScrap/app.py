@@ -2,7 +2,7 @@ import logging
 import re
 
 import config
-from src.irankiaiScrapping.tools.find_products import SearchSession
+from src.irankiaiScrap.tools.find_products import SearchSession
 
 logging.basicConfig(format='%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S',

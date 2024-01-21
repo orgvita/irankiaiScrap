@@ -3,7 +3,7 @@ import re
 import time
 
 import config
-from src.irankiaiScrapping.parsers.cat_find_items import SelectItemsParser
+from src.irankiaiScrap.parsers.cat_find_items import SelectItemsParser
 
 class SearchSession:
     def __init__(self, search_phrase):

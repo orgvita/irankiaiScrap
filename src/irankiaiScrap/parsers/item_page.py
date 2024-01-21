@@ -1,6 +1,6 @@
 import config
 
-from src.irankiaiScrapping.tools.html_parsing import parse_html
+from src.irankiaiScrap.tools.html_parsing import parse_html
 
 
 class ItemDetailsParser:
