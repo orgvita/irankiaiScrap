@@ -22,6 +22,12 @@ class SearchSession:
             print(self.url)
             logger.info(f'category page: {self.url}')
             self.category_page = SelectItemsParser(self.url)
+            """ All category pages end with '#!/p={no}'. However, entering a {no} greater than
+            the actual number of existing pages will still display the content of the last existing page.
+            To handle this, we use a dictionary named 'end_control'.
+            After scraping each new category page, we check if the first new product is already in this dictionary.
+            If it isn't, we add it to the dictionary for future comparison.
+            If it does exist, we stop the pagination. """
             for i, item_in_page in enumerate(self.category_page.articles):
                 time.sleep(config.SLEEP)
                 if i == 0:

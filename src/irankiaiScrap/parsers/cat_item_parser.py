@@ -33,6 +33,8 @@ class CatItemParser:
         logger.debug(f'item link: {self.link}')
         return self.link
 
+
+    # item_inner - we go to product inner page and collect some additional info (SKU).
     @property
     def item_inner(self):
         self.child = ItemDetailsParser(f'{self.link}')
